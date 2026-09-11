@@ -1,0 +1,10 @@
+[
+    {
+        "asset-name": "btsdk-tools",
+        "locked-commit": "release-v3.3.0"
+    },
+    {
+        "asset-name": "core-make",
+        "locked-commit": "release-v1.9.1"
+    }
+]
