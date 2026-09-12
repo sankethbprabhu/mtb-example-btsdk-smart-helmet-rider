@@ -2,8 +2,7 @@
 
 ## Overview
 This app demonstrates Bluetooth&#174; A2DP source, A2DP sink, AVRCP Controller/Target,
-Apple Media Service (AMS), Apple Notification Center Service (ANCS),
-and HFP Hands-free Unit.
+Apple Media Service (AMS), Apple Notification Center Service (ANCS), Hands-free Audio Gateway, Hands-free Unit and Bluetooth Intercom.
 
 Features demonstrated:
 
@@ -16,6 +15,8 @@ Features demonstrated:
  - SDP and GATT descriptor/attribute configuration
  - AIROC&#8482; SCO/RFCOMM initiator APIs
  - HFP Hands-free Unit role
+ - HFP Hands-free Audio Gateway role
+ - Bluetooth Intercom
 
 ## Instructions
 To demonstrate the app, follow these steps:
@@ -131,6 +132,12 @@ HFP Hands-free Unit:
    -  Control Held calls ( Only support "Release all held", "Release active accept other", "Place active on hold and accept other", "Add held to conversation( It’s functionality depends on the telecom network operator, if the telecom network side support the feature, the function will work. AG always supports this feature and responses OK)")
    -  Mic / Speaker gain control
 
+Bluetooth Intercom:
+
+- To create a Bluetooth hands-free intercom connection with a remote Hands-free Unit (HF) device, use ClientControl and choose the Bluetooth&#174; address of the remote HF device from the BR/EDR combo box.
+- Click on "Connect" button under the AG tab.
+- Click on "Audio Connect" to establish the SCO connection which will enable voice communication between the rider and the co-rider.
+
 AMA Service:
 
 - The Watch AMA application can support the voice recognition service
@@ -142,6 +149,15 @@ AMA Service:
 - Voice Recognition
   - Switch to the AVRC CT tab -> Click the Long Press button.
 - The AMS and ANCS should be connected incidentally after pairing with an iPhone by the Alexa app.
+
+Button Support:
+
+- The Smart Helmet Rider application can support an operation independent of ClientControl using the button SW3 on the CYW9BTAUDIO3 shield voice
+- During an incoming call, press the button once to answer the call
+- During an ongoing call, press the button once to hang-up the call
+- Press the button 2 times to establish an HFP connection with the co-rider's helmet
+- Once the HFP connection is established, press the same button 3 times to enable SCO-based intercom connection
+- Once the SCO connection has been established, press it again 3 times to close the SCO connection
 
 ## BTSTACK version
 
